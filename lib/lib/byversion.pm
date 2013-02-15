@@ -77,7 +77,7 @@ So you have >1 Perl Installs.  You have >1 Perl installs right?
 And you switch between running them how?
 
 Let me guess, somewhere you have code that sets a different value for PERL5LIB depending on what Perl you're using.
-Oh you use L<perlbrew? I have bad news for you|http://grep.cpan.me/?q=PERL5LIB+dist=App-perlbrew>
+Oh you use L<perlbrew?|http://grep.cpan.me/?q=PERL5LIB+dist=App-perlbrew>
 
 This is a slightly different approach:
 
@@ -127,7 +127,7 @@ This is an analogue of C<$^V> except :
 
 =over 4
 
-=item it should work on even perls that didn't have C<$^V>, as it converts it from C<$]> with L<version>
+=item it should work on even perls that didn't have C<$^V>, as it converts it from C<$]> with L<version.pm|version>
 
 =item it lacks the preceeding C<v>, because this is more usually what you want and its easier to template it in than take it out.
 
