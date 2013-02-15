@@ -1,0 +1,79 @@
+# NAME
+
+lib::byversion - add paths to @INC depending on which version of perl is running.
+
+# VERSION
+
+version 0.001000
+
+# SYNOPSIS
+
+    PERL5OPT="-Mlib::byversion='$HOME/Foo/Bar/%V/lib/...'"
+
+or alternatively
+
+    use lib::byversion "/some/path/%V/lib/...";
+
+# DESCRIPTION
+
+So you have >1 Perl Installs.  You have >1 Perl installs right?
+And you switch between running them how?
+
+Let me guess, somewhere you have code that sets a different value for PERL5LIB depending on what Perl you're using.
+Oh you use [perlbrew? I have bad news for you](http://grep.cpan.me/?q=PERL5LIB+dist=App-perlbrew)
+
+This is a slightly different approach:
+
+1. Set up your user-land PERL5LIB dirs in a regular pattern differing only by perl version
+
+        $HOME/Foo/Bar/5.16.0/lib/...
+        $HOME/Foo/Bar/5.16.1/lib/...
+        $HOME/Foo/Bar/5.16.2/lib/...
+2. Set the following in your `%ENV`
+
+        PERL5OPT="-Mlib::byversion='$HOME/Foo/Bar/%V/lib/...'"
+3. Bam!
+
+    The right PERL5LIB gets loaded based on which perl you use.
+
+Yes, yes, catch 22, `lib::byversion` and its dependencies need to be in your lib to start with.
+
+Ok. That is a problem, slightly. But assuming you can get that in each perl install somehow, you can load each perls user library dirs magically with this module once its loaded.
+
+And "assuming you can get that in each perl install somehow" =~ with a bit of luck, this feature or something like it might just be added to Perl itself, as this is just a prototype idea to prove it works ( or as the case may be, not ).
+
+And even if that never happens, and you like this module, you can still install this module into all your perls and keep a seperate user-PERL5LIB-per-perl without having to use lots of scripts to hold it together, and for System Perls, you may even be fortunate enough to get this module shipped by your `OS` of choice. Wouldn't that be dandy.
+
+# IMPORT
+
+`lib::byversion` expects one parameter, a string path containing templated variables for versions.
+
+Current defined parameters include:
+
+- `%V`
+
+    This is an analogue of `$^V` except :
+
+    - it should work on even perls that didn't have `$^V`, as it converts it from `$]` with [version](http://search.cpan.org/perldoc?version)
+    - it lacks the preceeding `v`, because this is more usually what you want and its easier to template it in than take it out.
+
+        %V = 5.16.9 # for example
+
+- `%v`
+
+    This is the same as `$]` stringified on your Perl.
+
+        %v = 5.016009 # for example
+
+More may be slated at some future time, ie: to allow support for components based on git sha1's, but I figured to upload something that works before I bloat it out with features nobody will ever use.
+
+# AUTHOR
+
+Kent Fredric <kentfredric@gmail.com>
+
+# COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2013 by Kent Fredric <kentfredric@gmail.com>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
