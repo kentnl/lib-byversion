@@ -106,9 +106,3 @@ POD ERRORS
     Around line 112:
         You forgot a '=back' before '=head1'
 
-    Around line 136:
-        =back doesn't take any parameters, but you said =back 4
-
-    Around line 150:
-        =back doesn't take any parameters, but you said =back 4
-

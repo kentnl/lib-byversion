@@ -133,7 +133,7 @@ This is an analogue of C<$^V> except :
 
 =item it lacks the preceeding C<v>, because this is more usually what you want and its easier to template it in than take it out.
 
-=back 4
+=back
 
 Example:
 
@@ -147,7 +147,7 @@ Example:
 
     %v = 5.016009
 
-=back 4
+=back
 
 More may be slated at some future time, ie: to allow support for components based on git sha1's, but I figured to upload something that works before I bloat it out with features nobody will ever use.
 
