@@ -35,26 +35,23 @@ DESCRIPTION
     3. Bam!
         The right PERL5LIB gets loaded based on which perl you use.
 
-        =back.
+    Yes, yes, catch 22, "lib::byversion" and its dependencies need to be in
+    your lib to start with.
 
-        Yes, yes, catch 22, "lib::byversion" and its dependencies need to be
-        in your lib to start with.
+    Ok. That is a problem, slightly. But assuming you can get that in each
+    perl install somehow, you can load each perls user library dirs
+    magically with this module once its loaded.
 
-        Ok. That is a problem, slightly. But assuming you can get that in
-        each perl install somehow, you can load each perls user library dirs
-        magically with this module once its loaded.
+    And "assuming you can get that in each perl install somehow" =~ with a
+    bit of luck, this feature or something like it might just be added to
+    Perl itself, as this is just a prototype idea to prove it works ( or as
+    the case may be, not ).
 
-        And "assuming you can get that in each perl install somehow" =~ with
-        a bit of luck, this feature or something like it might just be added
-        to Perl itself, as this is just a prototype idea to prove it works (
-        or as the case may be, not ).
-
-        And even if that never happens, and you like this module, you can
-        still install this module into all your perls and keep a seperate
-        user-PERL5LIB-per-perl without having to use lots of scripts to hold
-        it together, and for System Perls, you may even be fortunate enough
-        to get this module shipped by your "OS" of choice. Wouldn't that be
-        dandy.
+    And even if that never happens, and you like this module, you can still
+    install this module into all your perls and keep a seperate
+    user-PERL5LIB-per-perl without having to use lots of scripts to hold it
+    together, and for System Perls, you may even be fortunate enough to get
+    this module shipped by your "OS" of choice. Wouldn't that be dandy.
 
 IMPORT
         use lib::byversion $param
@@ -98,11 +95,4 @@ COPYRIGHT AND LICENSE
 
     This is free software; you can redistribute it and/or modify it under
     the same terms as the Perl 5 programming language system itself.
-
-POD ERRORS
-    Hey! The above document had some coding errors, which are explained
-    below:
-
-    Around line 112:
-        You forgot a '=back' before '=head1'
 

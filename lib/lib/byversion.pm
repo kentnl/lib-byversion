@@ -99,7 +99,7 @@ This is a slightly different approach:
 
 The right PERL5LIB gets loaded based on which perl you use.
 
-=back.
+=back
 
 Yes, yes, catch 22, C<lib::byversion> and its dependencies need to be in your lib to start with.
 
