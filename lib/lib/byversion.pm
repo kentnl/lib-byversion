@@ -6,7 +6,7 @@ BEGIN {
   $lib::byversion::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $lib::byversion::VERSION = '0.1.0';
+  $lib::byversion::VERSION = '0.001000';
 }
 
 # ABSTRACT: add paths to @INC depending on which version of perl is running.
@@ -63,7 +63,7 @@ lib::byversion - add paths to @INC depending on which version of perl is running
 
 =head1 VERSION
 
-version 0.1.0
+version 0.001000
 
 =head1 SYNOPSIS
 
@@ -129,9 +129,13 @@ This is an analogue of C<$^V> except :
 
 =back 4
 
+    %V = 5.16.9 # for example
+
 =item C<%v>
 
 This is the same as C<$]> stringified on your Perl.
+
+    %v = 5.016009 # for example
 
 =back 4
 

@@ -3,7 +3,7 @@ NAME
     running.
 
 VERSION
-    version 0.1.0
+    version 0.001000
 
 SYNOPSIS
         PERL5OPT="-Mlib::byversion='$HOME/Foo/Bar/%V/lib/...'"
@@ -69,7 +69,11 @@ IMPORT
         it lacks the preceeding "v", because this is more usually what you
         want and its easier to template it in than take it out.
 
+            %V = 5.16.9 # for example
+
     %v  This is the same as $] stringified on your Perl.
+
+            %v = 5.016009 # for example
 
     More may be slated at some future time, ie: to allow support for
     components based on git sha1's, but I figured to upload something that
@@ -95,6 +99,6 @@ POD ERRORS
     Around line 130:
         =back doesn't take any parameters, but you said =back 4
 
-    Around line 136:
+    Around line 140:
         =back doesn't take any parameters, but you said =back 4
 

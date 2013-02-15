@@ -20,14 +20,14 @@ my %module_build_args = (
     "Kent Fredric <kentfredric\@gmail.com>"
   ],
   "dist_name" => "lib-byversion",
-  "dist_version" => "0.1.0",
+  "dist_version" => "0.001000",
   "license" => "perl",
   "module_name" => "lib::byversion",
   "recommends" => {},
   "recursive_test_files" => 1,
   "requires" => {
     "String::Formatter" => 0,
-    "perl" => "v5.10.0",
+    "perl" => "5.006",
     "strict" => 0,
     "version" => "0.77",
     "warnings" => 0

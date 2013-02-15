@@ -19,14 +19,14 @@ name: lib-byversion
 provides:
   lib::byversion:
     file: lib/lib/byversion.pm
-    version: v0.1.0
+    version: 0.001000
 requires:
   String::Formatter: 0
-  perl: v5.10.0
+  perl: 5.006
   strict: 0
   version: 0.77
   warnings: 0
-version: 0.1.0
+version: 0.001000
 x_BuiltWith:
   modules:
     Dist::Zilla::PluginBundle::Author::KENTNL: 1.7.0
