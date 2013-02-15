@@ -76,9 +76,13 @@ This is an analogue of C<$^V> except :
 
 =back 4
 
+    %V = 5.16.9 # for example
+
 =item C<%v>
 
 This is the same as C<$]> stringified on your Perl.
+
+    %v = 5.016009 # for example
 
 =back 4
 
