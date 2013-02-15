@@ -32,7 +32,7 @@ use String::Formatter stringf => {
 sub import {
   my ( $self, @args ) = @_;
   if ( @args != 1 ) {
-    die "lib::byversion->import takes exactly one argument, instead, you specified " . scalar @args;
+    die 'lib::byversion->import takes exactly one argument, instead, you specified ' . scalar @args;
   }
   my $path = path_format(@args);
   return lib->import($path);
