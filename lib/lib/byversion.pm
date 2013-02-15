@@ -14,7 +14,7 @@ So you have >1 Perl Installs.  You have >1 Perl installs right?
 And you switch between running them how?
 
 Let me guess, somewhere you have code that sets a different value for PERL5LIB depending on what Perl you're using.
-Oh you use L<perlbrew? I have bad news for you|http://grep.cpan.me/?q=PERL5LIB+dist=App-perlbrew>
+Oh you use L<perlbrew?|http://grep.cpan.me/?q=PERL5LIB+dist=App-perlbrew>
 
 This is a slightly different approach:
 
@@ -34,7 +34,7 @@ This is a slightly different approach:
 
 The right PERL5LIB gets loaded based on which perl you use.
 
-=back.
+=back
 
 Yes, yes, catch 22, C<lib::byversion> and its dependencies need to be in your lib to start with.
 
@@ -77,11 +77,11 @@ This is an analogue of C<$^V> except :
 
 =over 4
 
-=item it should work on even perls that didn't have C<$^V>, as it converts it from C<$]> with L<version>
+=item it should work on even perls that didn't have C<$^V>, as it converts it from C<$]> with L<version.pm|version>
 
 =item it lacks the preceeding C<v>, because this is more usually what you want and its easier to template it in than take it out.
 
-=back 4
+=back
 
 Example:
 
@@ -95,7 +95,7 @@ Example:
 
     %v = 5.016009
 
-=back 4
+=back
 
 More may be slated at some future time, ie: to allow support for components based on git sha1's, but I figured to upload something that works before I bloat it out with features nobody will ever use.
 
@@ -116,11 +116,10 @@ use String::Formatter stringf => {
 sub import {
   my ( $self, @args ) = @_;
   if ( @args != 1 ) {
-    die "lib::byversion->import takes exactly one argument, instead, you specified " . scalar @args;
+    die 'lib::byversion->import takes exactly one argument, instead, you specified ' . scalar @args;
   }
   my $path = path_format(@args);
-  lib->import($path);
-
+  return lib->import($path);
 }
 
 sub unimport {
@@ -129,8 +128,7 @@ sub unimport {
     die "lib::byversion->import takes exactly one argument, instead, you specified " . scalar @args;
   }
   my $path = path_format(@args);
-  lib->unimport($path);
-
+  return lib->unimport($path);
 }
 
 1;
