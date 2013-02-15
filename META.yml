@@ -26,6 +26,10 @@ requires:
   strict: 0
   version: 0.77
   warnings: 0
+resources:
+  bugtracker: https://github.com/kentfredric/lib-byversion/issues
+  homepage: https://github.com/kentfredric/lib-byversion
+  repository: https://github.com/kentfredric/lib-byversion.git
 version: 0.001000
 x_BuiltWith:
   modules:

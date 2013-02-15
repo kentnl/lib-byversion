@@ -111,6 +111,12 @@ And even if that never happens, and you like this module, you can still install 
 
 =head1 IMPORT
 
+    use lib::byversion $param
+    lib::byversion->import($param)
+    perl -Mlib::byversion=$param
+
+etc.
+
 C<lib::byversion> expects one parameter, a string path containing templated variables for versions.
 
 Current defined parameters include:
@@ -129,13 +135,17 @@ This is an analogue of C<$^V> except :
 
 =back 4
 
-    %V = 5.16.9 # for example
+Example:
+
+    %V = 5.16.9
 
 =item C<%v>
 
 This is the same as C<$]> stringified on your Perl.
 
-    %v = 5.016009 # for example
+Example:
+
+    %v = 5.016009
 
 =back 4
 

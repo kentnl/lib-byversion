@@ -64,6 +64,17 @@
       }
    },
    "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/kentfredric/lib-byversion/issues"
+      },
+      "homepage" : "https://github.com/kentfredric/lib-byversion",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/kentfredric/lib-byversion.git",
+         "web" : "https://github.com/kentfredric/lib-byversion"
+      }
+   },
    "version" : "0.001000",
    "x_BuiltWith" : {
       "modules" : {
