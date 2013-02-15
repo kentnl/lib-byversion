@@ -35,8 +35,7 @@ sub import {
     die "lib::byversion->import takes exactly one argument, instead, you specified " . scalar @args;
   }
   my $path = path_format(@args);
-  lib->import($path);
-
+  return lib->import($path);
 }
 
 sub unimport {
@@ -45,8 +44,7 @@ sub unimport {
     die "lib::byversion->import takes exactly one argument, instead, you specified " . scalar @args;
   }
   my $path = path_format(@args);
-  lib->unimport($path);
-
+  return lib->unimport($path);
 }
 
 1;
