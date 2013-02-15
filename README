@@ -79,7 +79,7 @@ IMPORT
 
             %V = 5.16.9
 
-    %v  This is the same as $] stringified on your Perl.
+    %v  This is the same as $] on your Perl.
 
         Example:
 

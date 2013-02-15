@@ -141,7 +141,7 @@ Example:
 
 =item C<%v>
 
-This is the same as C<$]> stringified on your Perl.
+This is the same as C<$]> on your Perl.
 
 Example:
 
