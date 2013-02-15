@@ -1,0 +1,129 @@
+do{ my $x = [
+       {
+         'ARGV' => []
+       },
+       {},
+       {
+         'install_base' => undef,
+         'module_name' => 'lib::byversion',
+         'c_source' => undef,
+         'extra_compiler_flags' => [],
+         'recursive_test_files' => 1,
+         'destdir' => undef,
+         'create_makefile_pl' => undef,
+         'needs_compiler' => '',
+         'magic_number' => undef,
+         'pod_files' => undef,
+         'recurse_into' => [],
+         'auto_configure_requires' => 1,
+         'prereq_action_types' => [
+                                    'requires',
+                                    'build_requires',
+                                    'conflicts',
+                                    'recommends'
+                                  ],
+         'build_class' => 'Module::Build',
+         'bindoc_dirs' => [
+                            'blib/script'
+                          ],
+         'create_license' => undef,
+         'autosplit' => undef,
+         'dynamic_config' => 1,
+         'allow_mb_mismatch' => 0,
+         'mymetafile' => 'MYMETA.yml',
+         '_added_to_INC' => [],
+         'get_options' => {},
+         'conflicts' => {},
+         'dist_abstract' => 'add paths to @INC depending on which version of perl is running.',
+         'install_path' => {},
+         'original_prefix' => {},
+         'test_file_exts' => [
+                               '.t'
+                             ],
+         'build_script' => 'Build',
+         'use_rcfile' => 1,
+         'html_css' => '',
+         'meta_add' => {},
+         'dist_suffix' => undef,
+         'build_elements' => [
+                               'PL',
+                               'support',
+                               'pm',
+                               'xs',
+                               'share_dir',
+                               'pod',
+                               'script'
+                             ],
+         'orig_dir' => '/home/kent/perl/lib-byversion/lib-byversion-0.001000',
+         'use_tap_harness' => 0,
+         'share_dir' => undef,
+         'scripts' => undef,
+         'install_sets' => {},
+         'cpan_client' => 'cpan',
+         'metafile' => 'META.yml',
+         'bundle_inc' => [],
+         'mb_version' => '0.4003',
+         'bundle_inc_preload' => [],
+         'debugger' => undef,
+         'recommends' => {},
+         'debug' => undef,
+         'sign' => undef,
+         'blib' => 'blib',
+         'pollute' => undef,
+         'requires' => {
+                         'strict' => 0,
+                         'version' => '0.77',
+                         'warnings' => 0,
+                         'perl' => '5.006',
+                         'String::Formatter' => 0
+                       },
+         'build_bat' => 0,
+         'config' => undef,
+         'script_files' => [],
+         'program_name' => undef,
+         'dist_version_from' => undef,
+         'extra_linker_flags' => [],
+         'test_files' => undef,
+         'release_status' => 'stable',
+         'pm_files' => undef,
+         'libdoc_dirs' => [
+                            'blib/lib',
+                            'blib/arch'
+                          ],
+         'base_dir' => '/home/kent/perl/lib-byversion/lib-byversion-0.001000',
+         'metafile2' => 'META.json',
+         'dist_version' => '0.001000',
+         'installdirs' => 'site',
+         'verbose' => undef,
+         'config_dir' => '_build',
+         'dist_author' => [
+                            'Kent Fredric <kentfredric@gmail.com>'
+                          ],
+         'xs_files' => undef,
+         'mymetafile2' => 'MYMETA.json',
+         'create_readme' => undef,
+         'meta_merge' => {},
+         'tap_harness_args' => {},
+         'prefix_relpaths' => {},
+         'has_config_data' => undef,
+         'license' => 'perl',
+         'configure_requires' => {
+                                   'Module::Build' => '0.4003'
+                                 },
+         'PL_files' => undef,
+         'include_dirs' => [],
+         'build_requires' => {
+                               'Module::Build' => '0.4003',
+                               'File::Find' => 0,
+                               'Test::More' => '0.98',
+                               'File::Temp' => 0
+                             },
+         'quiet' => undef,
+         'install_base_relpaths' => {},
+         'prefix' => undef,
+         'perl' => '/home/kent/perl5/perlbrew/perls/perl-blead/bin/perl5.17.9',
+         'create_packlist' => 1,
+         'dist_name' => 'lib-byversion'
+       }
+     ];
+$x; }
