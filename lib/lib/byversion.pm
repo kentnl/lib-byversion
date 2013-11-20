@@ -106,7 +106,7 @@ O.k. That is a problem, slightly. But assuming you can get that in each C<perl> 
 
 And "assuming you can get that in each perl install somehow" =~ with a bit of luck, this feature or something like it might just be added to Perl itself, as this is just a prototype idea to prove it works ( or as the case may be, not ).
 
-And even if that never happens, and you like this module, you can still install this module into all your C<perl>'s and keep a separate user-PERL5LIB-per-perl without having to use lots of scripts to hold it together, and for System Perls, you may even be fortunate enough to get this module shipped by your C<OS> of choice. Wouldn't that be dandy.
+And even if that never happens, and you like this module, you can still install this module into all your C<perl>'s and keep a separate C<user-PERL5LIB-per-perl> without having to use lots of scripts to hold it together, and for System Perls, you may even be fortunate enough to get this module shipped by your C<OS> of choice. Wouldn't that be dandy.
 
 =head1 IMPORT
 

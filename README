@@ -48,9 +48,9 @@ DESCRIPTION
 
     And even if that never happens, and you like this module, you can still
     install this module into all your "perl"'s and keep a separate
-    user-PERL5LIB-per-perl without having to use lots of scripts to hold it
-    together, and for System Perls, you may even be fortunate enough to get
-    this module shipped by your "OS" of choice. Wouldn't that be dandy.
+    "user-PERL5LIB-per-perl" without having to use lots of scripts to hold
+    it together, and for System Perls, you may even be fortunate enough to
+    get this module shipped by your "OS" of choice. Wouldn't that be dandy.
 
 IMPORT
         use lib::byversion $param
