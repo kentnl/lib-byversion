@@ -1,6 +1,6 @@
 NAME
-    lib::byversion - add paths to @INC depending on which version of perl is
-    running.
+    lib::byversion - add paths to @INC depending on which version of "perl"
+    is running.
 
 VERSION
     version 0.001001

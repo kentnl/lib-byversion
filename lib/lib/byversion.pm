@@ -9,7 +9,7 @@ BEGIN {
   $lib::byversion::VERSION = '0.001001';
 }
 
-# ABSTRACT: add paths to @INC depending on which version of perl is running.
+# ABSTRACT: add paths to @INC depending on which version of C<perl> is running.
 
 use lib ();
 use version 0.77;
@@ -38,6 +38,7 @@ sub import {
   return lib->import($path);
 }
 
+## no critic (ProhibitBuiltinHomonyms)
 sub unimport {
   my ( $self, @args ) = @_;
   if ( @args != 1 ) {
@@ -57,7 +58,7 @@ __END__
 
 =head1 NAME
 
-lib::byversion - add paths to @INC depending on which version of perl is running.
+lib::byversion - add paths to @INC depending on which version of C<perl> is running.
 
 =head1 VERSION
 

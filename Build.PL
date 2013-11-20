@@ -12,7 +12,7 @@ my %module_build_args = (
   "configure_requires" => {
     "Module::Build" => "0.4202"
   },
-  "dist_abstract" => "add paths to \@INC depending on which version of perl is running.",
+  "dist_abstract" => "add paths to \@INC depending on which version of C<perl> is running.",
   "dist_author" => [
     "Kent Fredric <kentfredric\@gmail.com>"
   ],

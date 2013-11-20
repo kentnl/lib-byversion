@@ -1,5 +1,5 @@
 ---
-abstract: 'add paths to @INC depending on which version of perl is running.'
+abstract: 'add paths to @INC depending on which version of C<perl> is running.'
 author:
   - 'Kent Fredric <kentfredric@gmail.com>'
 build_requires:
