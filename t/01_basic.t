@@ -9,8 +9,8 @@ require version;
 my $old_version;
 my $new_version;
 
-eval q{ $old_version = $] }  or note '] version not available, perl bugged? ' . $@;
-eval q{ $new_version = $^V } or note '^V version not available on this perl' . $@;
+eval q{ $old_version = $] }                 or note '] version not available, perl bugged? ' . $@;
+eval q{ $new_version = sprintf "%vd", $^V } or note '^V version not available on this perl' . $@;
 
 if ($old_version) {
   my $expected_old = '/foo/' . $old_version . '/bar/';

@@ -3,7 +3,7 @@ NAME
     running.
 
 VERSION
-    version 0.001000
+    version 0.001001
 
 SYNOPSIS
         PERL5OPT="-Mlib::byversion='$HOME/Foo/Bar/%V/lib/...'"

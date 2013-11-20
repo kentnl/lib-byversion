@@ -6,7 +6,7 @@ BEGIN {
   $lib::byversion::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $lib::byversion::VERSION = '0.001000';
+  $lib::byversion::VERSION = '0.001001';
 }
 
 # ABSTRACT: add paths to @INC depending on which version of perl is running.
@@ -53,7 +53,7 @@ __END__
 
 =pod
 
-=encoding utf-8
+=encoding UTF-8
 
 =head1 NAME
 
@@ -61,7 +61,7 @@ lib::byversion - add paths to @INC depending on which version of perl is running
 
 =head1 VERSION
 
-version 0.001000
+version 0.001001
 
 =head1 SYNOPSIS
 
