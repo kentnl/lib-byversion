@@ -78,13 +78,13 @@ So you have >1 Perl Installs.  You have >1 Perl installs right?
 And you switch between running them how?
 
 Let me guess, somewhere you have code that sets a different value for PERL5LIB depending on what Perl you're using.
-Oh you use L<perlbrew?|http://grep.cpan.me/?q=PERL5LIB+dist=App-perlbrew>
+Oh you use L<< C<perlbrew>?|http://grep.cpan.me/?q=PERL5LIB+dist=App-perlbrew >>
 
 This is a slightly different approach:
 
 =over 4
 
-=item 1. Set up your user-land PERL5LIB dirs in a regular pattern differing only by perl version
+=item 1. Set up your user-land PERL5LIB directories in a regular pattern differing only by C<perl> version
 
     $HOME/Foo/Bar/5.16.0/lib/...
     $HOME/Foo/Bar/5.16.1/lib/...
@@ -94,7 +94,7 @@ This is a slightly different approach:
 
     PERL5OPT="-Mlib::byversion='$HOME/Foo/Bar/%V/lib/...'"
 
-=item 3. Bam!
+=item 3. Done!
 
 The right PERL5LIB gets loaded based on which perl you use.
 
@@ -102,11 +102,11 @@ The right PERL5LIB gets loaded based on which perl you use.
 
 Yes, yes, catch 22, C<lib::byversion> and its dependencies need to be in your lib to start with.
 
-Ok. That is a problem, slightly. But assuming you can get that in each perl install somehow, you can load each perls user library dirs magically with this module once its loaded.
+O.k. That is a problem, slightly. But assuming you can get that in each perl install somehow, you can load each C<perl>'s user library dirs magically with this module once its loaded.
 
 And "assuming you can get that in each perl install somehow" =~ with a bit of luck, this feature or something like it might just be added to Perl itself, as this is just a prototype idea to prove it works ( or as the case may be, not ).
 
-And even if that never happens, and you like this module, you can still install this module into all your perls and keep a seperate user-PERL5LIB-per-perl without having to use lots of scripts to hold it together, and for System Perls, you may even be fortunate enough to get this module shipped by your C<OS> of choice. Wouldn't that be dandy.
+And even if that never happens, and you like this module, you can still install this module into all your perls and keep a separate user-PERL5LIB-per-perl without having to use lots of scripts to hold it together, and for System Perls, you may even be fortunate enough to get this module shipped by your C<OS> of choice. Wouldn't that be dandy.
 
 =head1 IMPORT
 
@@ -130,7 +130,7 @@ This is an analogue of C<$^V> except :
 
 =item it should work on even perls that didn't have C<$^V>, as it converts it from C<$]> with L<version.pm|version>
 
-=item it lacks the preceeding C<v>, because this is more usually what you want and its easier to template it in than take it out.
+=item it lacks the preceding C<v>, because this is more usually what you want and its easier to template it in than take it out.
 
 =back
 
