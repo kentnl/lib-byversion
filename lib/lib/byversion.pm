@@ -148,7 +148,7 @@ Example:
 
 =back
 
-More may be slated at some future time, ie: to allow support for components based on git sha1's, but I figured to upload something that works before I bloat it out with features nobody will ever use.
+More may be slated at some future time, e.g.: to allow support for components based on C<git> C<sha1>'s, but I figured to upload something that works before I bloat it out with features nobody will ever use.
 
 =head1 AUTHOR
 
