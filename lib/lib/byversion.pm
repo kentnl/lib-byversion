@@ -3,7 +3,7 @@ use warnings;
 
 package lib::byversion;
 
-# ABSTRACT: add paths to @INC depending on which version of perl is running.
+# ABSTRACT: add paths to @INC depending on which version of C<perl> is running.
 
 use lib ();
 use version 0.77;
@@ -14,13 +14,13 @@ So you have >1 Perl Installs.  You have >1 Perl installs right?
 And you switch between running them how?
 
 Let me guess, somewhere you have code that sets a different value for PERL5LIB depending on what Perl you're using.
-Oh you use L<perlbrew?|http://grep.cpan.me/?q=PERL5LIB+dist=App-perlbrew>
+Oh you use L<< C<perlbrew>?|http://grep.cpan.me/?q=PERL5LIB+dist=App-perlbrew >>
 
 This is a slightly different approach:
 
 =over 4
 
-=item 1. Set up your user-land PERL5LIB dirs in a regular pattern differing only by perl version
+=item 1. Set up your user-land PERL5LIB directories in a regular pattern differing only by C<perl> version
 
     $HOME/Foo/Bar/5.16.0/lib/...
     $HOME/Foo/Bar/5.16.1/lib/...
@@ -30,19 +30,19 @@ This is a slightly different approach:
 
     PERL5OPT="-Mlib::byversion='$HOME/Foo/Bar/%V/lib/...'"
 
-=item 3. Bam!
+=item 3. Done!
 
-The right PERL5LIB gets loaded based on which perl you use.
+The right PERL5LIB gets loaded based on which C<perl> you use.
 
 =back
 
 Yes, yes, catch 22, C<lib::byversion> and its dependencies need to be in your lib to start with.
 
-Ok. That is a problem, slightly. But assuming you can get that in each perl install somehow, you can load each perls user library dirs magically with this module once its loaded.
+O.k. That is a problem, slightly. But assuming you can get that in each C<perl> install somehow, you can load each C<perl>'s user library directories magically with this module once its loaded.
 
-And "assuming you can get that in each perl install somehow" =~ with a bit of luck, this feature or something like it might just be added to Perl itself, as this is just a prototype idea to prove it works ( or as the case may be, not ).
+And "assuming you can get that in each C<perl> install somehow" =~ with a bit of luck, this feature or something like it might just be added to Perl itself, as this is just a prototype idea to prove it works ( or as the case may be, not ).
 
-And even if that never happens, and you like this module, you can still install this module into all your perls and keep a seperate user-PERL5LIB-per-perl without having to use lots of scripts to hold it together, and for System Perls, you may even be fortunate enough to get this module shipped by your C<OS> of choice. Wouldn't that be dandy.
+And even if that never happens, and you like this module, you can still install this module into all your C<perl>'s and keep a separate C<user-PERL5LIB-per-perl> without having to use lots of scripts to hold it together, and for System Perls, you may even be fortunate enough to get this module shipped by your C<OS> of choice. Wouldn't that be dandy.
 
 =cut
 
@@ -77,9 +77,9 @@ This is an analogue of C<$^V> except :
 
 =over 4
 
-=item it should work on even perls that didn't have C<$^V>, as it converts it from C<$]> with L<version.pm|version>
+=item it should work on even C<perl>s that didn't have C<$^V>, as it converts it from C<$]> with L<version.pm|version>
 
-=item it lacks the preceeding C<v>, because this is more usually what you want and its easier to template it in than take it out.
+=item it lacks the preceding C<v>, because this is more usually what you want and its easier to template it in than take it out.
 
 =back
 
@@ -97,7 +97,7 @@ Example:
 
 =back
 
-More may be slated at some future time, ie: to allow support for components based on git sha1's, but I figured to upload something that works before I bloat it out with features nobody will ever use.
+More may be slated at some future time, e.g.: to allow support for components based on C<git> C<sha1>'s, but I figured to upload something that works before I bloat it out with features nobody will ever use.
 
 =cut
 
@@ -122,6 +122,7 @@ sub import {
   return lib->import($path);
 }
 
+## no critic (ProhibitBuiltinHomonyms)
 sub unimport {
   my ( $self, @args ) = @_;
   if ( @args != 1 ) {
