@@ -2,13 +2,8 @@ use strict;
 use warnings;
 
 package lib::byversion;
-BEGIN {
-  $lib::byversion::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $lib::byversion::VERSION = '0.001001';
-}
-
+our $AUTHORITY = 'cpan:KENTNL';
+$lib::byversion::VERSION = '0.001002';
 # ABSTRACT: add paths to @INC depending on which version of C<perl> is running.
 
 use lib ();
@@ -62,7 +57,7 @@ lib::byversion - add paths to @INC depending on which version of C<perl> is runn
 
 =head1 VERSION
 
-version 0.001001
+version 0.001002
 
 =head1 SYNOPSIS
 
@@ -156,7 +151,7 @@ Kent Fredric <kentfredric@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2015 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
