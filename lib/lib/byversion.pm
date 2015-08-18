@@ -3,6 +3,8 @@ use warnings;
 
 package lib::byversion;
 
+our $VERSION = '0.002000';
+
 # ABSTRACT: add paths to @INC depending on which version of C<perl> is running.
 
 use lib ();
