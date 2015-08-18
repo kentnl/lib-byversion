@@ -10,6 +10,39 @@ our $VERSION = '0.002000';
 use lib ();
 use version 0.77;
 
+use String::Formatter stringf => {
+  -as   => path_format =>,
+  codes => {
+    v => "$]",
+    V => do {
+      my $x = version->parse("$]")->normal;
+      $x =~ s{^v}{};
+      $x;
+    },
+  }
+};
+
+sub import {
+  my ( $self, @args ) = @_;
+  if ( @args != 1 ) {
+    die 'lib::byversion->import takes exactly one argument, instead, you specified ' . scalar @args;
+  }
+  my $path = path_format(@args);
+  return lib->import($path);
+}
+
+## no critic (ProhibitBuiltinHomonyms)
+sub unimport {
+  my ( $self, @args ) = @_;
+  if ( @args != 1 ) {
+    die "lib::byversion->import takes exactly one argument, instead, you specified " . scalar @args;
+  }
+  my $path = path_format(@args);
+  return lib->unimport($path);
+}
+
+1;
+
 =head1 DESCRIPTION
 
 So you have >1 Perl Installs.  You have >1 Perl installs right?
@@ -46,8 +79,6 @@ And "assuming you can get that in each C<perl> install somehow" =~ with a bit of
 
 And even if that never happens, and you like this module, you can still install this module into all your C<perl>'s and keep a separate C<user-PERL5LIB-per-perl> without having to use lots of scripts to hold it together, and for System Perls, you may even be fortunate enough to get this module shipped by your C<OS> of choice. Wouldn't that be dandy.
 
-=cut
-
 =head1 SYNOPSIS
 
     PERL5OPT="-Mlib::byversion='$HOME/Foo/Bar/%V/lib/...'"
@@ -55,8 +86,6 @@ And even if that never happens, and you like this module, you can still install 
 or alternatively
 
     use lib::byversion "/some/path/%V/lib/...";
-
-=cut
 
 =head1 IMPORT
 
@@ -102,36 +131,3 @@ Example:
 More may be slated at some future time, e.g.: to allow support for components based on C<git> C<sha1>'s, but I figured to upload something that works before I bloat it out with features nobody will ever use.
 
 =cut
-
-use String::Formatter stringf => {
-  -as   => path_format =>,
-  codes => {
-    v => "$]",
-    V => do {
-      my $x = version->parse("$]")->normal;
-      $x =~ s{^v}{};
-      $x;
-    },
-  }
-};
-
-sub import {
-  my ( $self, @args ) = @_;
-  if ( @args != 1 ) {
-    die 'lib::byversion->import takes exactly one argument, instead, you specified ' . scalar @args;
-  }
-  my $path = path_format(@args);
-  return lib->import($path);
-}
-
-## no critic (ProhibitBuiltinHomonyms)
-sub unimport {
-  my ( $self, @args ) = @_;
-  if ( @args != 1 ) {
-    die "lib::byversion->import takes exactly one argument, instead, you specified " . scalar @args;
-  }
-  my $path = path_format(@args);
-  return lib->unimport($path);
-}
-
-1;
