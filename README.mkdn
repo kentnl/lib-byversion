@@ -4,7 +4,7 @@ lib::byversion - add paths to @INC depending on which version of `perl` is runni
 
 # VERSION
 
-version 0.001002
+version 0.002000
 
 # SYNOPSIS
 

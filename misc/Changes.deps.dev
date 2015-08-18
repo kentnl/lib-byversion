@@ -1,6 +1,9 @@
 This file contains changes to DEVELOPMENT dependencies only ( both REQUIRED and OPTIONAL )
 
-0.001002
+0.002000
+ [Added / develop recommends]
+ - Test::More 0.99
+
  [Added / develop requires]
  - Dist::Zilla 5
  - Dist::Zilla::Plugin::Author::KENTNL::CONTRIBUTING 0.001003
@@ -10,6 +13,7 @@ This file contains changes to DEVELOPMENT dependencies only ( both REQUIRED and 
  - Dist::Zilla::Plugin::Git::Contributors 0.006
  - Dist::Zilla::Plugin::Git::NextRelease 0.004000
  - Dist::Zilla::Plugin::Git::NextVersion::Sanitized
+ - Dist::Zilla::Plugin::MakeMaker
  - Dist::Zilla::Plugin::MetaYAML::Minimal
  - Dist::Zilla::Plugin::MinimumPerl
  - Dist::Zilla::Plugin::Prereqs::AuthorDeps
@@ -23,7 +27,7 @@ This file contains changes to DEVELOPMENT dependencies only ( both REQUIRED and 
  - English
  - Software::License::Perl_5
  - Test::EOL
- - Test::More 1.302007_004
+ - Test::More 0.96
 
  [Added / develop suggests]
  - Dist::Zilla::App::Command::bakeini 0.002005
@@ -39,7 +43,9 @@ This file contains changes to DEVELOPMENT dependencies only ( both REQUIRED and 
  - Dist::Zilla::Plugin::EOLTests
  - Dist::Zilla::Plugin::Git::NextVersion
  - Dist::Zilla::Plugin::MetaYAML
+ - Dist::Zilla::Plugin::ModuleBuild
  - Dist::Zilla::Plugin::NextRelease
+ - Dist::Zilla::Plugin::Prereqs::MatchInstalled
  - Dist::Zilla::Plugin::PruneCruft
  - Dist::Zilla::Plugin::ReadmeFromPod
  - Dist::Zilla::Plugin::ReportVersions::Tiny
