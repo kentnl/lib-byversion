@@ -4,7 +4,7 @@ use warnings;
 
 package lib::byversion;
 
-our $VERSION = '0.002001';
+our $VERSION = '0.002002';
 
 # ABSTRACT: add paths to @INC depending on which version of Perl is running.
 
@@ -58,7 +58,7 @@ lib::byversion - add paths to @INC depending on which version of Perl is running
 
 =head1 VERSION
 
-version 0.002001
+version 0.002002
 
 =head1 SYNOPSIS
 
