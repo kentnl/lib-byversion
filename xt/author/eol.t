@@ -11,7 +11,9 @@ my @files = (
     't/00-compile/lib_lib_byversion_pm.t',
     't/00-report-prereqs.dd',
     't/00-report-prereqs.t',
-    't/01_basic.t'
+    't/01_basic.t',
+    't/02_import_ok.t',
+    't/03_unimport.t'
 );
 
 eol_unix_ok($_, { trailing_whitespace => 1 }) foreach @files;
