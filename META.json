@@ -1,5 +1,5 @@
 {
-   "abstract" : "add paths to @INC depending on which version of C<perl> is running.",
+   "abstract" : "add paths to @INC depending on which version of Perl is running.",
    "author" : [
       "Kent Fredric <kentnl@cpan.com>"
    ],
