@@ -1,7 +1,7 @@
 ---
 abstract: 'add paths to @INC depending on which version of C<perl> is running.'
 author:
-  - 'Kent Fredric <kentfredric@gmail.com>'
+  - 'Kent Fredric <kentnl@cpan.com>'
 build_requires:
   ExtUtils::MakeMaker: '0'
   File::Spec: '0'
@@ -20,7 +20,7 @@ name: lib-byversion
 provides:
   lib::byversion:
     file: lib/lib/byversion.pm
-    version: '0.002000'
+    version: '0.001002'
 requires:
   String::Formatter: '0'
   lib: '0'
@@ -29,7 +29,7 @@ requires:
   version: '0.77'
   warnings: '0'
 resources:
-  bugtracker: https://github.com/kentfredric/lib-byversion/issues
-  homepage: https://github.com/kentfredric/lib-byversion
-  repository: https://github.com/kentfredric/lib-byversion.git
-version: '0.002000'
+  bugtracker: https://github.com/kentnl/lib-byversion/issues
+  homepage: https://github.com/kentnl/lib-byversion
+  repository: https://github.com/kentnl/lib-byversion.git
+version: '0.001002'
