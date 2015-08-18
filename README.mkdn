@@ -4,7 +4,7 @@ lib::byversion - add paths to @INC depending on which version of `perl` is runni
 
 # VERSION
 
-version 0.001001
+version 0.001002
 
 # SYNOPSIS
 
@@ -24,15 +24,17 @@ Oh you use [`perlbrew`?](http://grep.cpan.me/?q=PERL5LIB+dist=App-perlbrew)
 
 This is a slightly different approach:
 
-1. Set up your user-land PERL5LIB directories in a regular pattern differing only by `perl` version
+- 1. Set up your user-land PERL5LIB directories in a regular pattern differing only by `perl` version
 
         $HOME/Foo/Bar/5.16.0/lib/...
         $HOME/Foo/Bar/5.16.1/lib/...
         $HOME/Foo/Bar/5.16.2/lib/...
-2. Set the following in your `%ENV`
+
+- 2. Set the following in your `%ENV`
 
         PERL5OPT="-Mlib::byversion='$HOME/Foo/Bar/%V/lib/...'"
-3. Done!
+
+- 3. Done!
 
     The right PERL5LIB gets loaded based on which `perl` you use.
 
@@ -79,11 +81,11 @@ More may be slated at some future time, e.g.: to allow support for components ba
 
 # AUTHOR
 
-Kent Fredric <kentfredric@gmail.com>
+Kent Fredric &lt;kentfredric@gmail.com>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2015 by Kent Fredric &lt;kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
