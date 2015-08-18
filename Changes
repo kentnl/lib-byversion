@@ -1,12 +1,12 @@
 Release history for lib-byversion
 
-0.001002 2015-08-18T00:49:00Z 761d195
+0.001002 2015-08-18T00:49:57Z 02bfced
  [Dependencies::Stats]
  - Dependencies changed since 0.001001, see misc/*.deps* for details
  - build: ↑1
- - configure: ↑1
- - develop: +3 ↑1
- - test: ↑1
+ - configure: +1 ↑1
+ - develop: +22 ↑2 -11 (suggests: +2 -1)
+ - test: +3 ↑1 (recommends: +1)
 
 0.001001 2013-11-20T06:54:37Z
  [00 Bugfix]
