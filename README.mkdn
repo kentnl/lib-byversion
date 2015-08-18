@@ -98,7 +98,7 @@ I bloat it out with features nobody will ever use.
 
 # AUTHOR
 
-Kent Fredric &lt;kentnl@cpan.com>
+Kent Fredric &lt;kentnl@cpan.org>
 
 # COPYRIGHT AND LICENSE
 

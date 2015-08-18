@@ -1,6 +1,9 @@
 Release history for lib-byversion
 
 {{$NEXT}}
+ [Metadata]
+ - CPAN.com? What planet is this?
+ - Author fixed to be @cpan.org
 
 0.002000 2015-08-18T03:45:00Z dc0f081
  [01 - Installer Changed]
