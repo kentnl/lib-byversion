@@ -1,6 +1,6 @@
 # NAME
 
-lib::byversion - add paths to @INC depending on which version of `perl` is running.
+lib::byversion - add paths to @INC depending on which version of Perl is running.
 
 # VERSION
 
@@ -19,12 +19,14 @@ or alternatively
 So you have >1 Perl Installs.  You have >1 Perl installs right?
 And you switch between running them how?
 
-Let me guess, somewhere you have code that sets a different value for PERL5LIB depending on what Perl you're using.
+Let me guess, somewhere you have code that sets a different value for PERL5LIB
+depending on what Perl you're using.
 Oh you use [`perlbrew`?](http://grep.cpan.me/?q=PERL5LIB+dist=App-perlbrew)
 
 This is a slightly different approach:
 
-- 1. Set up your user-land PERL5LIB directories in a regular pattern differing only by `perl` version
+- 1. Set up your user-land PERL5LIB directories in a regular pattern
+differing only by `perl` version
 
         $HOME/Foo/Bar/5.16.0/lib/...
         $HOME/Foo/Bar/5.16.1/lib/...
@@ -38,13 +40,23 @@ This is a slightly different approach:
 
     The right PERL5LIB gets loaded based on which `perl` you use.
 
-Yes, yes, catch 22, `lib::byversion` and its dependencies need to be in your lib to start with.
+Yes, yes, catch 22, `lib::byversion` and its dependencies need to be in
+your lib to start with.
 
-O.k. That is a problem, slightly. But assuming you can get that in each `perl` install somehow, you can load each `perl`'s user library directories magically with this module once its loaded.
+O.k. That is a problem, slightly. But assuming you can get that in each
+`perl` install somehow, you can load each `perl`'s user library directories
+magically with this module once its loaded.
 
-And "assuming you can get that in each `perl` install somehow" =~ with a bit of luck, this feature or something like it might just be added to Perl itself, as this is just a prototype idea to prove it works ( or as the case may be, not ).
+And "assuming you can get that in each `perl` install somehow" =~ with a bit
+of luck, this feature or something like it might just be added to Perl itself,
+as this is just a prototype idea to prove it works ( or as the case may be,
+not ).
 
-And even if that never happens, and you like this module, you can still install this module into all your `perl`'s and keep a separate `user-PERL5LIB-per-perl` without having to use lots of scripts to hold it together, and for System Perls, you may even be fortunate enough to get this module shipped by your `OS` of choice. Wouldn't that be dandy.
+And even if that never happens, and you like this module, you can still
+install this module into all your `perl`'s and keep a separate
+`user-PERL5LIB-per-perl` without having to use lots of scripts to hold it
+together, and for System Perls, you may even be fortunate enough to get this
+module shipped by your `OS` of choice. Wouldn't that be dandy.
 
 # IMPORT
 
@@ -54,7 +66,8 @@ And even if that never happens, and you like this module, you can still install 
 
 etc.
 
-`lib::byversion` expects one parameter, a string path containing templated variables for versions.
+`lib::byversion` expects one parameter, a string path containing templated
+variables for versions.
 
 Current defined parameters include:
 
@@ -62,8 +75,10 @@ Current defined parameters include:
 
     This is an analogue of `$^V` except :
 
-    - it should work on even `perl`s that didn't have `$^V`, as it converts it from `$]` with [version.pm](https://metacpan.org/pod/version)
-    - it lacks the preceding `v`, because this is more usually what you want and its easier to template it in than take it out.
+    - it should work on even `perl`s that didn't have `$^V`, as it converts
+    it from `$]` with [version.pm](https://metacpan.org/pod/version)
+    - it lacks the preceding `v`, because this is more usually what you want
+    and its easier to template it in than take it out.
 
     Example:
 
@@ -77,7 +92,9 @@ Current defined parameters include:
 
         %v = 5.016009
 
-More may be slated at some future time, e.g.: to allow support for components based on `git` `sha1`'s, but I figured to upload something that works before I bloat it out with features nobody will ever use.
+More may be slated at some future time, e.g.: to allow support for components
+based on `git` `sha1`'s, but I figured to upload something that works before
+I bloat it out with features nobody will ever use.
 
 # AUTHOR
 

@@ -7,7 +7,7 @@ use 5.006;
 use ExtUtils::MakeMaker;
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "add paths to \@INC depending on which version of C<perl> is running.",
+  "ABSTRACT" => "add paths to \@INC depending on which version of Perl is running.",
   "AUTHOR" => "Kent Fredric <kentnl\@cpan.com>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0
