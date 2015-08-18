@@ -1,6 +1,6 @@
 Release history for lib-byversion
 
-0.002000 2015-08-18T00:59:13Z 837f3a7
+0.002000 2015-08-18T01:13:04Z 81adcf7
  [01 - Installer Changed]
  - Installer now migrated to use ExtUtils::MakeMaker
  - https://questhub.io/realm/perl/quest/5388cc12bbd0be5b2500011f
