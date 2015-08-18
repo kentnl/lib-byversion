@@ -2,12 +2,101 @@ use strict;
 use warnings;
 
 package lib::byversion;
-our $AUTHORITY = 'cpan:KENTNL';
 $lib::byversion::VERSION = '0.001002';
 # ABSTRACT: add paths to @INC depending on which version of C<perl> is running.
 
 use lib ();
 use version 0.77;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

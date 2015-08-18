@@ -11,7 +11,8 @@ my %module_build_args = (
     "Module::Build" => "0.4214"
   },
   "configure_requires" => {
-    "Module::Build" => "0.4214"
+    "Module::Build" => "0.4214",
+    "perl" => "5.006"
   },
   "dist_abstract" => "add paths to \@INC depending on which version of C<perl> is running.",
   "dist_author" => [
@@ -31,14 +32,20 @@ my %module_build_args = (
     "warnings" => 0
   },
   "test_requires" => {
-    "Test::More" => "1.302007_004"
+    "ExtUtils::MakeMaker" => 0,
+    "File::Spec" => 0,
+    "Test::More" => "1.302007_004",
+    "perl" => "5.006"
   }
 );
 
 
 my %fallback_build_requires = (
+  "ExtUtils::MakeMaker" => 0,
+  "File::Spec" => 0,
   "Module::Build" => "0.4214",
-  "Test::More" => "1.302007_004"
+  "Test::More" => "1.302007_004",
+  "perl" => "5.006"
 );
 
 
