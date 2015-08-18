@@ -166,7 +166,7 @@ stop_words = templated
 
 [-Editor::RequireEmacsFileVariables]
 
-[ErrorHandling::RequireCarping]
+[-ErrorHandling::RequireCarping]
 
 [ErrorHandling::RequireCheckingReturnValueOfEval]
 
