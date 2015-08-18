@@ -2,7 +2,9 @@ use strict;
 use warnings;
 
 package lib::byversion;
-$lib::byversion::VERSION = '0.002000';
+
+our $VERSION = '0.002000';
+
 # ABSTRACT: add paths to @INC depending on which version of C<perl> is running.
 
 use lib ();

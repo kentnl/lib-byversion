@@ -10,7 +10,9 @@ copyright_holder = Kent Fredric <kentfredric@gmail.com>
 
 [@Author::KENTNL]
 :version          = 2.025
-git_versions      = 1
+bumpversions      = 1
+normal_form       = numify
+mantissa          = 6
 toolkit           = eumm
 toolkit_hardness  = soft
 srcreadme         = mkdn
