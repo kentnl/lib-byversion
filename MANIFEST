@@ -21,6 +21,10 @@ maint-travis-ci/sync_tree.pl
 maint-travis-ci/yamls/sterile.mkdn
 maint-travis-ci/yamls/sterile.yaml
 maint-travis-ci/yamls/sterile2.yaml
+misc/Changes.deps
+misc/Changes.deps.all
+misc/Changes.deps.dev
+misc/Changes.deps.opt
 perlcritic.rc
 t/00-compile/lib_lib_byversion_pm.t
 t/000-report-versions-tiny.t
