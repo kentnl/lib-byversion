@@ -27,8 +27,13 @@ for my $wordlist (@stopwords) {
   $bundle->add_or_append_policy_field( 'Documentation::PodSpelling' => ( 'stop_words' => $wordlist ) );
 }
 
-$bundle->add_or_append_policy_field( 'Subroutines::ProhibitCallsToUndeclaredSubs' =>
-    ( 'exempt_subs' => [ 'String::Formatter::str_rf', 'String::Formatter::path_format', ] ), );
+for my $formatter (qw( str_rf path_format )) {
+  $bundle->add_or_append_policy_field(
+    'Subroutines::ProhibitCallsToUndeclaredSubs' => (
+      'exempt_subs' => 'String::Formatter::' . $formatter,
+    ),
+  );
+}
 
 $bundle->remove_policy('ErrorHandling::RequireUseOfExceptions');
 
