@@ -165,7 +165,7 @@ I bloat it out with features nobody will ever use.
 
 =head1 AUTHOR
 
-Kent Fredric <kentnl@cpan.com>
+Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

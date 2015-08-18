@@ -1,7 +1,7 @@
 {
    "abstract" : "add paths to @INC depending on which version of Perl is running.",
    "author" : [
-      "Kent Fredric <kentnl@cpan.com>"
+      "Kent Fredric <kentnl@cpan.org>"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Dist::Zilla version 5.039, CPAN::Meta::Converter version 2.150005",
@@ -885,9 +885,6 @@
          "version" : "5.039"
       }
    },
-   "x_authority" : "cpan:KENTNL",
-   "x_contributors" : [
-      "Kent Fredric <kentnl@cpan.org>"
-   ]
+   "x_authority" : "cpan:KENTNL"
 }
 

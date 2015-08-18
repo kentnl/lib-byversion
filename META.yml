@@ -1,7 +1,7 @@
 ---
 abstract: 'add paths to @INC depending on which version of Perl is running.'
 author:
-  - 'Kent Fredric <kentnl@cpan.com>'
+  - 'Kent Fredric <kentnl@cpan.org>'
 build_requires:
   ExtUtils::MakeMaker: '0'
   File::Spec: '0'
