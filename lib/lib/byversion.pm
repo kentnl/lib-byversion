@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package lib::byversion;
-$lib::byversion::VERSION = '0.001002';
+$lib::byversion::VERSION = '0.002000';
 # ABSTRACT: add paths to @INC depending on which version of C<perl> is running.
 
 use lib ();
@@ -146,7 +146,7 @@ lib::byversion - add paths to @INC depending on which version of C<perl> is runn
 
 =head1 VERSION
 
-version 0.001002
+version 0.002000
 
 =head1 SYNOPSIS
 
