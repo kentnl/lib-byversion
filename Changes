@@ -1,6 +1,10 @@
 Release history for lib-byversion
 
-0.002002 2015-08-18T04:36:11Z 3405170
+0.002002 2017-03-07T09:39:24Z cf38d10
+ [Dependencies::Stats]
+ - Dependencies changed since 0.002001, see misc/*.deps* for details
+ - develop: +1 ↑1 (suggests: ↑2)
+ - test: ↓1
 
 0.002001 2015-08-18T04:35:32Z fb6ecb3
  [Metadata]
