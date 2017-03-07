@@ -1,6 +1,6 @@
 Release history for lib-byversion
 
-0.002002 2017-03-07T09:39:24Z cf38d10
+0.002002 2017-03-07T09:43:05Z 97a6c72
  [Dependencies::Stats]
  - Dependencies changed since 0.002001, see misc/*.deps* for details
  - develop: +1 ↑1 (suggests: ↑2)
