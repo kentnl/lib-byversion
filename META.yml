@@ -20,7 +20,7 @@ name: lib-byversion
 provides:
   lib::byversion:
     file: lib/lib/byversion.pm
-    version: '0.002002'
+    version: '0.002003'
 requires:
   String::Formatter: '0'
   lib: '0'
@@ -32,4 +32,4 @@ resources:
   bugtracker: https://github.com/kentnl/lib-byversion/issues
   homepage: https://github.com/kentnl/lib-byversion
   repository: https://github.com/kentnl/lib-byversion.git
-version: '0.002002'
+version: '0.002003'
